@@ -1,0 +1,175 @@
+<%- include("../partials/admin/nav") %> <%- include("../partials/admin/header")
+%>
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+	<%- include ("../partials/messages"); %>
+	<div class="pcoded-content">
+		<!-- [ breadcrumb ] start -->
+		<div class="page-header">
+			<div class="page-block">
+				<div class="row align-items-center">
+					<div class="col-md-12">
+						<div class="page-header-title">
+							<h5 class="m-b-10">Dashboard Analytics</h5>
+						</div>
+						<ul class="breadcrumb">
+							<li class="breadcrumb-item">
+								<a href="#"><i class="feather icon-home"></i></a>
+							</li>
+							<li class="breadcrumb-item">
+								<a href="#!">Dashboard Analytics</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [ breadcrumb ] end -->
+		<!-- [ Main Content ] start -->
+		<div class="row">
+			<!-- table card-1 start -->
+			<div class="col-md-12 col-xl-6">
+				<div class="card flat-card">
+					<div class="row-table">
+						<div class="col-sm-6 card-body br">
+							<div class="row">
+								<div class="col-sm-4">
+									<i
+										class="icon feather icon-file-text text-c-blue mb-1 d-block"
+									></i>
+								</div>
+								<div class="col-sm-8 text-md-center">
+									<h5>2000 +</h5>
+									<span>1st Years</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 card-body br">
+							<div class="row">
+								<div class="col-sm-4">
+									<i
+										class="icon feather icon-file-text text-c-green mb-1 d-block"
+									></i>
+								</div>
+								<div class="col-sm-8 text-md-center">
+									<h5>2000 +</h5>
+									<span>2nd Years</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row-table">
+						<div class="col-sm-6 card-body br">
+							<div class="row">
+								<div class="col-sm-4">
+									<i
+										class="icon feather icon-file-text text-c-yellow mb-1 d-block"
+									></i>
+								</div>
+								<div class="col-sm-8 text-md-center">
+									<h5>2000 +</h5>
+									<span>3rd Years</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 card-body br">
+							<div class="row">
+								<div class="col-sm-4">
+									<i
+										class="icon feather icon-file-text text-c-red mb-1 d-block"
+									></i>
+								</div>
+								<div class="col-sm-8 text-md-center">
+									<h5>2000 +</h5>
+									<span>4th Years</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- table card-1 end -->
+
+			<!-- prject ,team member start -->
+			<div class="col-xl-6 col-md-12">
+				<div class="card table-card">
+					<div class="card-header">
+						<h5>Courses</h5>
+						<div class="card-header-right">
+							<div class="btn-group card-option">
+								<button
+									type="button"
+									class="btn dropdown-toggle"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									<i class="feather icon-more-horizontal"></i>
+								</button>
+								<ul
+									class="list-unstyled card-option dropdown-menu dropdown-menu-right"
+								>
+									<li class="dropdown-item full-card">
+										<a href="#!"
+											><span
+												><i class="feather icon-maximize"></i> maximize</span
+											><span style="display: none"
+												><i class="feather icon-minimize"></i> Restore</span
+											></a
+										>
+									</li>
+									<li class="dropdown-item minimize-card">
+										<a href="#!"
+											><span><i class="feather icon-minus"></i> collapse</span
+											><span style="display: none"
+												><i class="feather icon-plus"></i> expand</span
+											></a
+										>
+									</li>
+									<li class="dropdown-item reload-card">
+										<a href="#!"
+											><i class="feather icon-refresh-cw"></i> reload</a
+										>
+									</li>
+									<li class="dropdown-item close-card">
+										<a href="#!"><i class="feather icon-trash"></i> remove</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="card-body p-0">
+						<div class="table-responsive">
+							<table class="table table-hover mb-0">
+								<thead>
+									<tr>
+										<th>Course Title</th>
+										<th>Code</th>
+										<th>Number of Students</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<p class="text-muted m-b-0">
+												Inro Artificial Intelligence
+											</p>
+										</td>
+										<td>CS 504</td>
+										<td class="text-center">70</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- prject ,team member start -->
+		</div>
+		<!-- [ Main Content ] end -->
+	</div>
+</div>
+<!-- [ Main Content ] end -->
+<%- include("../partials/admin/footer") %>

@@ -1,0 +1,98 @@
+<%- include("../partials/admin/nav") %> <%- include("../partials/admin/header")
+%>
+
+<!-- [ Main Content ] start -->
+<section class="pcoded-main-container">
+	<div class="pcoded-content">
+		<!-- [ breadcrumb ] start -->
+		<div class="page-header">
+			<div class="page-block">
+				<div class="row align-items-center">
+					<div class="col-md-12">
+						<div class="page-header-title">
+							<h5 class="m-b-10">
+								Staff Number: <span> <%= staffCount %> </span>
+							</h5>
+						</div>
+						<ul class="breadcrumb">
+							<li class="breadcrumb-item">
+								<a href="/admin"><i class="feather icon-home"></i></a>
+							</li>
+							<li class="breadcrumb-item">
+								<a href="#!">Staffs Information</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [ breadcrumb ] end -->
+		<!-- [ Main Content ] start -->
+		<%- include ("../partials/messages"); %>
+		<div class="row">
+			<!-- [ dark-table ] start -->
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<div class="card">
+					<div class="row mt-4">
+						<div class="col-md-2"></div>
+						<div class="col-md-8">
+							<form
+								action="/admin/staff-record"
+								enctype="multipart/form-data"
+								method="post"
+							>
+								<div class="input-group cust-file-button">
+									<div class="custom-file">
+										<input
+											type="file"
+											class="custom-file-input"
+											id="inputGroupFile04"
+											name="excelSheet"
+										/>
+										<label class="custom-file-label" for="inputGroupFile04"
+											>Upload staffs record: Choose an excel file</label
+										>
+									</div>
+									<div class="input-group-append">
+										<button class="btn btn-primary">Upload</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="card-body table-border-style">
+						<div class="table-responsive">
+							<table class="table table-dark">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Staff ID</th>
+										<th>Phone</th>
+									</tr>
+								</thead>
+								<tbody>
+									<% staffs.forEach(staff => { %>
+									<tr>
+										<td><%= count ++ %></td>
+										<td><%= staff.first_name %></td>
+										<td><%= staff.last_name %></td>
+										<td><%= staff.staff_id %></td>
+										<td><%= staff.phone %></td>
+									</tr>
+									<% }) %>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- [ dark-table ] end -->
+		</div>
+		<!-- [ Main Content ] end -->
+
+		<%- include("../partials/admin/footer") %>
+	</div>
+</section>
